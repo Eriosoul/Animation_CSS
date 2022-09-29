@@ -1,0 +1,149 @@
+*{
+	margin: 0px;
+	padding:0px;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	background: radial-gradient(#307BA0, #214154, #13242F);
+}
+
+#mapa{
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left:0px;
+	margin: auto;
+	width: 200px;
+	height: 200px;
+	background: url(Imagenes/Globo.jpg);
+	background-size: cover;
+	border-radius: 50%;
+	box-shadow: -30px -20px 0 0 rgba(0,0,0,0.1) inset,
+			    -70px -30px 0 0 rgba(0,0,0,0.1) inset,
+			    7px 7px 0 0 rgba(255,255,255,.5)inset;
+	animation: gira 5s infinite linear;
+}
+
+@keyframes gira{
+	from{
+		background-position: left center; 
+	}
+	to{
+		background-position: -300px  center;
+	}
+} 
+
+.estrella{
+	width: 2px;
+	height: 2px;
+	background:  white;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.primera{
+	top:15%;
+	left:30%;
+}
+
+.segunda{
+	top:25%;
+	left:90%;
+}
+
+.tercera{
+	top:45%;
+	left:30%;
+}
+
+.cuarta{
+	top:60%;
+	left:70%;
+}
+
+.quinta{
+	top:80%;
+	left:20%;
+}
+
+.sexta{
+	top:10%;
+	left:80%;
+}
+
+.estrella:nth-child(2n){
+	animation: par 2s infinite;
+}
+
+@keyframes par{
+	0%,85%{
+		box-shadow: 0 0 3px 3px rgba(255,255,255,.3);
+	}
+	100%{
+		box-shadow: 0 0 10px 10px rgba(255,255,255,.3);	
+	}
+}
+
+.estrella:nth-child(2n+1){
+	animation: impar 2s infinite;
+}
+
+@keyframes impar{
+	0%,35%, 50%, 100%{
+		box-shadow: 0 0 3px 3px rgba(255,255,255,.3);
+	}
+	45%{
+		box-shadow: 0 0 10px 10px rgba(255,255,255,.3);	
+	}
+}
+
+#meteoro{
+	background-color: white; 
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left:0px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	animation: cometa 6s infinite linear;
+	animation-duration: 5s;
+	animation-delay: 2;
+}
+
+@keyframes cometa{
+	0%{
+		box-shadow: 5px 4px 7px white,
+					-3px -4px 6px red,
+					6px 4px 7px black,
+					-5px -3px 5px green,
+					7px 4px 7px white,
+					-7px -2px 10px white;
+		transform-scale(2);
+		top:90%px;
+		left: -60px;
+	}
+	50%{
+		top: 50%;
+		left: 40%;
+		box-shadow: 5px 4px 7px white,
+					-3px -4px 6px red,
+					6px 4px 7px black,
+					-5px -3px 5px green,
+					7px 4px 7px white,
+					-7px -2px 10px white;
+		transform-scale(60px);
+	}
+	100%{
+		top:100%;
+		left: 100%;
+		box-shadow: 10px 4px 7px white,
+					-3px -4px 10px red;
+	}
+}

@@ -1,0 +1,109 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+
+img#trebol{
+	position: absolute;
+	left: 300px;
+	top:250px;
+	transform: rotate(-40deg);
+	animation-name: trebolsube;
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-iteration-count: 2;
+}
+
+/*se va a incilnar usando Transform*/
+/*hacer el rebol sube*/
+@keyframes trebolsube{
+	from{
+		left:300px;
+		top:250px;
+	}
+	to{
+		left: 0px;
+		top:-250px;
+	}
+}
+
+img#pica{
+	position: absolute;
+	left: 340px;
+	top:250px;
+	transform: rotate(-20deg);
+	animation: picasube 2s 2.3s;
+	animation-iteration-count: 3;
+}
+
+@keyframes picasube{
+	from{
+		left:340px;
+		top:250px;
+	}
+	to{
+		left: 200px;
+		top:-250px;
+	}
+}
+
+img#diamante{
+	position: absolute;
+	left: 380px;
+	top:250px;
+	transform: rotate(15deg);
+	animation: diamantesube 2s 2.6s;
+	animation-iteration-count: 4;
+}
+
+@keyframes diamantesube{
+	from{
+		left:380px;
+		top:250px;
+	}
+	to{
+		left: 400px;
+		top:-250px;
+	}
+}
+
+img#corazon{
+	position: absolute;
+	left: 420px;
+	top:250px;
+	transform: rotate(40deg);
+	animation: corazonsube 2s 2.9s;
+	/*animation-iteration-count: infinite;*/
+	animation-iteration-count: 2;
+}
+
+@keyframes corazonsube{
+	from{
+		left:420px;
+		top:250px;
+	}
+	to{
+		left: 600px;
+		top:-250px;
+	}
+}
+
+
+/*
+propiedad animation-driection para la direcion de la animacion  valor por defecto "normal"
+del final hasta el principio reverse
+para que vaya y vuelva alternate
+y si quiero que vaya del final al principio
+alternate-reverse
+
+@keyframes corazonsube{
+	0%{
+		left:420px;
+		top:250px;
+	}
+	100%{
+		left: 600px;
+		top:-250px;
+	}
+}
+*/
